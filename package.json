@@ -4,7 +4,7 @@
   "description": "Run multiple Webpack configurations in parallel with a nice UI.",
   "main": "dist/index.js",
   "repository": "https://github.com/mokkan/overpack",
-  "author": "Michael Swiger",
+  "author": "Michael Swiger <mokkan@gmail.com>",
   "license": "MIT",
   "bin": {
     "overpack": "./dist/app.js"
