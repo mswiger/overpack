@@ -1,7 +1,7 @@
 {
   "name": "overpack",
   "version": "1.0.0-alpha.1",
-  "description": "Run multiple Webpack configurations in parallel with a nice UI.",
+  "description": "Build multiple Webpack configurations in parallel with a nice UI.",
   "main": "dist/index.js",
   "repository": "https://github.com/mokkan/overpack",
   "author": "Michael Swiger <mokkan@gmail.com>",
