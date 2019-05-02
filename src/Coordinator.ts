@@ -1,4 +1,5 @@
 import * as NodeIPC from 'node-ipc';
+import * as logUpdate from 'log-update';
 import * as os from 'os';
 import * as shortid from 'shortid';
 import { Action, ErrorMessage, Message, TaskMessage, WarningMessage } from './MessageEmitter';
@@ -9,7 +10,6 @@ import { Task } from './Task';
 import chalk from 'chalk';
 import { loadConfig } from './Configuration';
 import { renderBuild } from './InteractiveRenderer';
-import logUpdate = require('log-update');
 
 export class Coordinator {
   private readonly configPath: string;
