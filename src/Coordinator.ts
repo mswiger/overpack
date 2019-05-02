@@ -6,6 +6,7 @@ import { WebpackWorker, WebpackWorkerOptions } from './WebpackWorker';
 import { Build } from './Build';
 import JestWorker from 'jest-worker';
 import { Task } from './Task';
+import chalk from 'chalk';
 import { loadConfig } from './Configuration';
 import { renderBuild } from './InteractiveRenderer';
 import logUpdate = require('log-update');
@@ -139,11 +140,17 @@ export class Coordinator {
           logUpdate.clear();
           logUpdate.done();
         }
+
+        const errorCount = build.errors.length.toString();
+        const warningCount = build.warnings.length.toString();
+
         console.log(renderBuild(build));
+        console.log(`Finished ${build.workerId} with ${errorCount} errors and ${warningCount} warnings`);
+        build.errors.forEach(error => console.log(chalk.red(error)));
+        build.warnings.forEach(warning => console.log(chalk.yellow(warning)));
+        console.log();
+
         this.runningBuilds.delete(build.workerId);
-        build.errors.forEach(error => console.log(error));
-        build.warnings.forEach(warning => console.log(warning));
-        console.log(`Finished ${build.workerId} at 10 o clock \n`);
       }
     }
 
