@@ -7,7 +7,7 @@
   "author": "Michael Swiger <mokkan@gmail.com>",
   "license": "MIT",
   "bin": {
-    "overpack": "./dist/app.js"
+    "overpack": "./dist/index.js"
   },
   "scripts": {
     "build": "tsc",
