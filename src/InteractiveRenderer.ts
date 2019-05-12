@@ -38,7 +38,7 @@ export function renderBuild(build: Build): string {
   for (const task of build.tasks.values()) {
     renderedTasks.push(renderTask(task));
   }
-  return `${chalk.bold.white(build.workerId)}\n${renderedTasks.join('\n')}`;
+  return `${chalk.bold(build.workerId)}\n${renderedTasks.join('\n')}`;
 }
 
 function renderTask(task: Task): string {
