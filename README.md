@@ -1,3 +1,5 @@
+# Project No Longer Maintained
+
 # Overpack
 
 Build multiple Webpack configurations in parallel.
